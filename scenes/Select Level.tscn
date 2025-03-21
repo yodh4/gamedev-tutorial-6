@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://cny73mpt7yeis"]
+
+[ext_resource type="Script" path="res://scripts/link_button.gd" id="1_6txib"]
+
+[node name="SelectLevel" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.94902, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "SELECT LEVEL"
+
+[node name="HBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="LinkButton" type="LinkButton" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "LEVEL 1"
+script = ExtResource("1_6txib")
+scene_to_load = "Level 1"
+
+[node name="LinkButton2" type="LinkButton" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "LEVEL 2"
+script = ExtResource("1_6txib")
+scene_to_load = "Level 2"
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/LinkButton" to="VBoxContainer/HBoxContainer/LinkButton" method="_on_New_Game_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/LinkButton2" to="VBoxContainer/HBoxContainer/LinkButton2" method="_on_New_Game_pressed"]

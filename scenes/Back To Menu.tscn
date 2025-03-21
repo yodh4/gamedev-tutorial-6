@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfia7leiq7epa"]
+
+[ext_resource type="Script" path="res://scripts/GameOverBtn.gd" id="1_feffl"]
+
+[node name="BackToMenu" type="MarginContainer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+grow_horizontal = 0
+
+[node name="LinkButton" type="LinkButton" parent="."]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+text = "Back To Menu"
+script = ExtResource("1_feffl")
+scene_to_load = "mainmenu"
+
+[connection signal="pressed" from="LinkButton" to="LinkButton" method="_on_Back_to_Menu_pressed"]

@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=4 uid="uid://damkuqx1xbloy"]
+[gd_scene load_steps=7 format=4 uid="uid://damkuqx1xbloy"]
 
-[ext_resource type="PackedScene" path="res://scenes/Player.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://cre3deqwxkjl2" path="res://scenes/Player.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://bls6pqt8flug3" path="res://scenes/tile_map.tscn" id="2_ixamt"]
 [ext_resource type="Texture2D" uid="uid://tpq0ge2lruix" path="res://assets/Familiar Looking Rocket.png" id="3"]
 [ext_resource type="PackedScene" uid="uid://bul5fybv2rytg" path="res://scenes/Area Trigger.tscn" id="4_enfm1"]
+[ext_resource type="PackedScene" uid="uid://dkfumhqqhc31j" path="res://scenes/Life Counter.tscn" id="5_0kxo6"]
+[ext_resource type="PackedScene" uid="uid://cfia7leiq7epa" path="res://scenes/Back To Menu.tscn" id="6_ka2j2"]
 
 [node name="Level 1" type="Node2D"]
 
@@ -25,3 +27,11 @@ scale = Vector2(10.1706, 0.6163)
 [node name="win_trigger" parent="." instance=ExtResource("4_enfm1")]
 position = Vector2(1743, 394)
 sceneName = "Level 2"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GUI" parent="CanvasLayer" instance=ExtResource("5_0kxo6")]
+offset_right = 1.0
+offset_bottom = 23.0
+
+[node name="BackToMenu" parent="CanvasLayer" instance=ExtResource("6_ka2j2")]
