@@ -74,3 +74,8 @@
 5. Polishing lainnya
     
     Untuk proses polishing lain yang saya lakukan adalah mengganti text button di main menu menjadi "New Game" dan menambahkan life counter pada scene level 2
+
+<br>
+Referensi transisi scene:
+
+- https://www.youtube.com/watch?v=Shj_QVwrefY
